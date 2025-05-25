@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索文物 - 中华瑰宝回廊</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/search.css">
+    <link rel="stylesheet" href="styles/barrage.css">
+</head>
+<body>
+    <div id="barrage-container"></div>
+    
+    <!-- 导航 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-icon">瑰</div>
+                <a href="index.html" class="site-title">中华瑰宝回廊</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="timeline.html" class="nav-link">时间轴</a>
+                <a href="search.html" class="nav-link active">搜索</a>
+                <a href="gallery.html" class="nav-link">画廊</a>
+                <a href="map.html" class="nav-link">文物地图</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 搜索区域 -->
+    <section class="search-header">
+        <h1 class="search-title">搜索文物</h1>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="输入文物名称、朝代或关键词..." class="search-input">
+                <button id="searchBtn" class="search-button">🔍</button>
+            </div>
+            <div class="search-suggestions" id="searchSuggestions"></div>
+        </div>
+    </section>
+
+    <!-- 高级搜索 -->
+    <section class="advanced-search">
+        <button class="advanced-toggle" id="advancedToggle">高级搜索 ▼</button>
+        <div class="advanced-panel" id="advancedPanel">
+            <div class="advanced-grid">
+                <div class="filter-group">
+                    <label>朝代</label>
+                    <select id="dynastySelect">
+                        <option value="">所有朝代</option>
+                        <option value="shang">商朝</option>
+                        <option value="zhou">周朝</option>
+                        <option value="qin">秦朝</option>
+                        <option value="han">汉朝</option>
+                        <option value="tang">唐朝</option>
+                        <option value="song">宋朝</option>
+                        <option value="ming">明朝</option>
+                        <option value="qing">清朝</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>类别</label>
+                    <select id="categorySelect">
+                        <option value="">所有类别</option>
+                        <option value="bronze">青铜器</option>
+                        <option value="ceramics">陶瓷</option>
+                        <option value="jade">玉器</option>
+                        <option value="calligraphy">书画</option>
+                        <option value="weapons">兵器</option>
+                        <option value="gold">金银器</option>
+                        <option value="stone">石器</option>
+                        <option value="lacquer">漆器</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>年代范围</label>
+                    <div class="year-range">
+                        <input type="number" id="yearFrom" placeholder="开始年份">
+                        <span>至</span>
+                        <input type="number" id="yearTo" placeholder="结束年份">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>文物等级</label>
+                    <select id="levelSelect">
+                        <option value="">所有等级</option>
+                        <option value="national">国宝级</option>
+                        <option value="first">一级文物</option>
+                        <option value="second">二级文物</option>
+                        <option value="third">三级文物</option>
+                    </select>
+                </div>
+            </div>
+            <button class="apply-filters" id="applyFilters">应用筛选</button>
+        </div>
+    </section>
+
+    <!-- 搜索结果 */
+    <section class="search-results">
+        <div class="results-header" id="resultsHeader"></div>
+        <div class="results-grid" id="resultsGrid"></div>
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>未找到相关文物</h3>
+            <p>请尝试其他关键词或调整搜索条件</p>
+        </div>
+    </section>
+
+    <!-- 文物详情模态框 -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content large" id="modalContent">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/barrage.js"></script>
+    <script src="scripts/search.js"></script>
+</body>
+</html>

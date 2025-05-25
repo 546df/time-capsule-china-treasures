@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文物地图 - 中华瑰宝回廊</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/map.css">
+    <link rel="stylesheet" href="styles/barrage.css">
+</head>
+<body>
+    <div id="barrage-container"></div>
+    
+    <!-- 导航 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-icon">瑰</div>
+                <a href="index.html" class="site-title">中华瑰宝回廊</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="timeline.html" class="nav-link">时间轴</a>
+                <a href="search.html" class="nav-link">搜索</a>
+                <a href="gallery.html" class="nav-link">画廊</a>
+                <a href="map.html" class="nav-link active">文物地图</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 地图标题 -->
+    <section class="map-header">
+        <h1 class="map-title">文物发现地图</h1>
+        <p class="map-subtitle">探索文物的发现地点与历史背景</p>
+    </section>
+
+    <!-- 地图容器 -->
+    <section class="map-container">
+        <div class="map-canvas" id="mapCanvas">
+            <!-- 中国地图SVG -->
+            <svg class="china-map" viewBox="0 0 1000 800" id="chinaMapSvg">
+                <!-- 地图省份将通过JavaScript动态生成 -->
+            </svg>
+            
+            <!-- 文物标记 -->
+            <div class="treasure-markers" id="treasureMarkers"></div>
+        </div>
+        
+        <!-- 地图控制面板 -->
+        <div class="map-controls">
+            <div class="legend">
+                <h3>图例</h3>
+                <div class="legend-item">
+                    <span class="legend-marker national"></span>
+                    <span>国宝级文物</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker first"></span>
+                    <span>一级文物</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker second"></span>
+                    <span>二级文物</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker third"></span>
+                    <span>三级文物</span>
+                </div>
+            </div>
+            
+            <div class="map-filters">
+                <h3>筛选</h3>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" checked data-level="national"> 国宝级
+                    </label>
+                    <label>
+                        <input type="checkbox" checked data-level="first"> 一级文物
+                    </label>
+                    <label>
+                        <input type="checkbox" checked data-level="second"> 二级文物
+                    </label>
+                    <label>
+                        <input type="checkbox" checked data-level="third"> 三级文物
+                    </label>
+                </div>
+                
+                <div class="dynasty-filter">
+                    <select id="mapDynastyFilter">
+                        <option value="all">所有朝代</option>
+                        <option value="shang">商朝</option>
+                        <option value="zhou">周朝</option>
+                        <option value="qin">秦朝</option>
+                        <option value="han">汉朝</option>
+                        <option value="tang">唐朝</option>
+                        <option value="song">宋朝</option>
+                        <option value="ming">明朝</option>
+                        <option value="qing">清朝</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 地点信息面板 -->
+    <div class="location-panel" id="locationPanel">
+        <button class="panel-close" id="panelClose">×</button>
+        <div class="panel-content" id="panelContent"></div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/barrage.js"></script>
+    <script src="scripts/map.js"></script>
+</body>
+</html>
