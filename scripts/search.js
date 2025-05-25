@@ -1,10 +1,102 @@
 
 // 搜索页面功能
+const treasuresData = [
+    {
+        id: 1,
+        name: "司母戊鼎",
+        dynasty: "商朝",
+        category: "青铜器",
+        location: "河南安阳",
+        description: "世界上现存最大最重的青铜礼器，重达832.84公斤",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop"
+    },
+    {
+        id: 2,
+        name: "妇好鸮尊",
+        dynasty: "商朝",
+        category: "青铜器",
+        location: "河南安阳",
+        description: "商代青铜酒器，以鸮（猫头鹰）为造型",
+        image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&h=200&fit=crop"
+    },
+    {
+        id: 3,
+        name: "毛公鼎",
+        dynasty: "周朝",
+        category: "青铜器",
+        location: "陕西岐山",
+        description: "西周晚期青铜器，铭文共32行497字",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop"
+    },
+    {
+        id: 4,
+        name: "兵马俑",
+        dynasty: "秦朝",
+        category: "陶俑",
+        location: "陕西西安",
+        description: "秦始皇陵兵马俑，世界第八大奇迹",
+        image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&h=200&fit=crop"
+    },
+    {
+        id: 5,
+        name: "马踏飞燕",
+        dynasty: "汉朝",
+        category: "青铜器",
+        location: "甘肃武威",
+        description: "汉代青铜艺术杰作，中国旅游标志",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop"
+    },
+    {
+        id: 6,
+        name: "唐三彩骆驼载乐俑",
+        dynasty: "唐朝",
+        category: "陶瓷",
+        location: "陕西西安",
+        description: "展现丝绸之路文化交流的精美陶俑",
+        image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&h=200&fit=crop"
+    },
+    {
+        id: 7,
+        name: "清明上河图",
+        dynasty: "宋朝",
+        category: "书画",
+        location: "北京故宫",
+        description: "描绘北宋汴京繁华景象的传世名画",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop"
+    },
+    {
+        id: 8,
+        name: "永乐大典",
+        dynasty: "明朝",
+        category: "典籍",
+        location: "北京故宫",
+        description: "世界最大的百科全书",
+        image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&h=200&fit=crop"
+    },
+    {
+        id: 9,
+        name: "翡翠白菜",
+        dynasty: "清朝",
+        category: "玉器",
+        location: "北京故宫",
+        description: "清代玉雕艺术精品",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop"
+    },
+    {
+        id: 10,
+        name: "四羊方尊",
+        dynasty: "商朝",
+        category: "青铜器",
+        location: "湖南宁乡",
+        description: "商代青铜礼器的杰出代表",
+        image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&h=200&fit=crop"
+    }
+];
+
 class SearchEngine {
     constructor() {
-        this.treasures = treasuresData; // 使用gallery.js中的数据
+        this.treasures = treasuresData;
         this.searchResults = [];
-        this.currentSort = 'relevance';
         this.init();
     }
 
@@ -89,19 +181,14 @@ class SearchEngine {
         resultsContainer.innerHTML = `
             <div class="results-header">
                 <div class="results-count">找到 ${this.searchResults.length} 件相关文物</div>
-                <div class="results-sort">
-                    <button class="sort-btn active" data-sort="relevance">相关性</button>
-                    <button class="sort-btn" data-sort="dynasty">朝代</button>
-                    <button class="sort-btn" data-sort="name">名称</button>
-                </div>
             </div>
             <div class="results-grid">
                 ${this.searchResults.map(treasure => this.createResultCard(treasure)).join('')}
             </div>
         `;
 
-        // 绑定排序按钮事件
-        this.initSortButtons();
+        // 绑定结果卡片点击事件
+        this.bindResultEvents();
     }
 
     createResultCard(treasure) {
@@ -110,30 +197,16 @@ class SearchEngine {
                 <img src="${treasure.image}" alt="${treasure.name}">
                 <div class="result-card-content">
                     <h3>${treasure.name}</h3>
-                    <div class="dynasty">${treasure.dynasty} · ${treasure.period}</div>
+                    <div class="dynasty">${treasure.dynasty}</div>
                     <div class="category">${treasure.category}</div>
-                    <div class="description">${treasure.description.substring(0, 150)}...</div>
+                    <div class="location">📍 ${treasure.location}</div>
+                    <div class="description">${treasure.description}</div>
                 </div>
             </div>
         `;
     }
 
-    initSortButtons() {
-        const sortButtons = document.querySelectorAll('.sort-btn');
-        
-        sortButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // 更新active状态
-                sortButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                // 执行排序
-                const sortType = btn.dataset.sort;
-                this.sortResults(sortType);
-            });
-        });
-
-        // 绑定结果卡片点击事件
+    bindResultEvents() {
         const resultCards = document.querySelectorAll('.result-card');
         resultCards.forEach(card => {
             card.addEventListener('click', () => {
@@ -144,23 +217,6 @@ class SearchEngine {
                 }
             });
         });
-    }
-
-    sortResults(sortType) {
-        switch (sortType) {
-            case 'dynasty':
-                this.searchResults.sort((a, b) => a.dynasty.localeCompare(b.dynasty));
-                break;
-            case 'name':
-                this.searchResults.sort((a, b) => a.name.localeCompare(b.name));
-                break;
-            case 'relevance':
-            default:
-                // 保持搜索相关性排序
-                break;
-        }
-        
-        this.renderResults();
     }
 
     showInitialMessage() {
@@ -184,6 +240,10 @@ class SearchEngine {
         `;
 
         // 绑定热门搜索点击事件
+        this.bindHotSearchEvents();
+    }
+
+    bindHotSearchEvents() {
         const hotSearches = document.querySelectorAll('.hot-search');
         hotSearches.forEach(search => {
             search.style.cssText = `
@@ -214,143 +274,11 @@ class SearchEngine {
     }
 
     showTreasureDetail(treasure) {
-        // 可以在这里实现详情页跳转或模态框显示
-        console.log('显示文物详情:', treasure.name);
-        
-        // 简单的alert显示，实际项目中可以改为模态框或页面跳转
-        alert(`${treasure.name}\n\n${treasure.dynasty} · ${treasure.period}\n\n${treasure.description}`);
-    }
-}
-
-// 高级搜索功能
-class AdvancedSearch {
-    constructor() {
-        this.searchHistory = this.loadSearchHistory();
-        this.init();
-    }
-
-    init() {
-        this.showSearchSuggestions();
-    }
-
-    showSearchSuggestions() {
-        const searchInput = document.getElementById('searchInput');
-        if (!searchInput) return;
-
-        // 创建搜索建议下拉框
-        const suggestionsContainer = document.createElement('div');
-        suggestionsContainer.className = 'search-suggestions';
-        suggestionsContainer.style.cssText = `
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(26, 26, 46, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 0 0 10px 10px;
-            max-height: 200px;
-            overflow-y: auto;
-            display: none;
-            z-index: 1000;
-        `;
-
-        searchInput.parentElement.style.position = 'relative';
-        searchInput.parentElement.appendChild(suggestionsContainer);
-
-        // 监听输入事件
-        searchInput.addEventListener('input', (e) => {
-            const value = e.target.value.toLowerCase();
-            if (value.length > 1) {
-                this.showSuggestions(value, suggestionsContainer);
-            } else {
-                suggestionsContainer.style.display = 'none';
-            }
-        });
-
-        // 点击外部隐藏建议
-        document.addEventListener('click', (e) => {
-            if (!searchInput.parentElement.contains(e.target)) {
-                suggestionsContainer.style.display = 'none';
-            }
-        });
-    }
-
-    showSuggestions(searchTerm, container) {
-        const suggestions = this.getSuggestions(searchTerm);
-        
-        if (suggestions.length === 0) {
-            container.style.display = 'none';
-            return;
-        }
-
-        container.innerHTML = suggestions.map(suggestion => `
-            <div class="suggestion-item" style="
-                padding: 0.8rem;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-            " data-suggestion="${suggestion}">
-                ${suggestion}
-            </div>
-        `).join('');
-
-        // 绑定点击事件
-        container.querySelectorAll('.suggestion-item').forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                item.style.background = 'rgba(255, 215, 0, 0.1)';
-            });
-
-            item.addEventListener('mouseleave', () => {
-                item.style.background = 'transparent';
-            });
-
-            item.addEventListener('click', () => {
-                const searchInput = document.getElementById('searchInput');
-                searchInput.value = item.dataset.suggestion;
-                container.style.display = 'none';
-                
-                // 触发搜索
-                const searchEvent = new Event('click');
-                document.getElementById('searchBtn').dispatchEvent(searchEvent);
-            });
-        });
-
-        container.style.display = 'block';
-    }
-
-    getSuggestions(searchTerm) {
-        const allTerms = [
-            '司母戊鼎', '妇好鸮尊', '毛公鼎', '兵马俑', '马踏飞燕',
-            '唐三彩骆驼载乐俑', '清明上河图', '永乐大典', '翡翠白菜',
-            '商朝', '周朝', '秦朝', '汉朝', '唐朝', '宋朝', '明朝', '清朝',
-            '青铜器', '陶瓷', '绘画', '玉器', '典籍', '陶俑'
-        ];
-
-        return allTerms
-            .filter(term => term.toLowerCase().includes(searchTerm))
-            .slice(0, 5);
-    }
-
-    saveSearchHistory(term) {
-        if (!this.searchHistory.includes(term)) {
-            this.searchHistory.unshift(term);
-            this.searchHistory = this.searchHistory.slice(0, 10); // 保留最近10次搜索
-            localStorage.setItem('searchHistory', JSON.stringify(this.searchHistory));
-        }
-    }
-
-    loadSearchHistory() {
-        try {
-            return JSON.parse(localStorage.getItem('searchHistory')) || [];
-        } catch {
-            return [];
-        }
+        alert(`${treasure.name}\n\n${treasure.dynasty}\n${treasure.location}\n\n${treasure.description}`);
     }
 }
 
 // 初始化搜索功能
 document.addEventListener('DOMContentLoaded', () => {
     new SearchEngine();
-    new AdvancedSearch();
 });
