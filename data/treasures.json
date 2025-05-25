@@ -11,6 +11,7 @@
       "currentLocation": "中国国家博物馆",
       "rarity": "国宝级",
       "description": "商朝后期王室用鼎，重达832.84公斤，是世界上现存最大最重的青铜礼器。鼎腹内壁铸有"司母戊"三字，为商王祖庚或祖甲为祭祀母亲戊而铸造。鼎形制雄伟，纹饰庄重，体现了商代青铜铸造技术的最高水平。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "specifications": {
         "material": "青铜",
         "dimensions": "高133厘米，口长110厘米，口宽79厘米",
@@ -35,6 +36,7 @@
       "currentLocation": "中国社会科学院考古研究所",
       "rarity": "国宝级",
       "description": "商代青铜酒器，以鸮（猫头鹰）为造型，线条流畅，纹饰精美。鸮在商代被视为战神，此尊出土于妇好墓，体现了商代女性的崇高地位和精湛的青铜铸造工艺。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "specifications": {
         "material": "青铜",
         "dimensions": "高45.9厘米",
@@ -58,6 +60,7 @@
       "currentLocation": "台北故宫博物院",
       "rarity": "国宝级",
       "description": "西周晚期青铜器，因铭文中有"毛公"字样而得名。铭文共32行，497字，是已知西周青铜器铭文中最长的一篇，记录了周宣王册命毛公的史实。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "specifications": {
         "material": "青铜",
         "dimensions": "高53.8厘米，口径47.9厘米",
@@ -81,6 +84,7 @@
       "currentLocation": "秦始皇帝陵博物院",
       "rarity": "世界文化遗产",
       "description": "秦始皇陵兵马俑是世界考古史上最伟大的发现之一。数千个陶制士兵、战马和战车排列整齐，形态各异，栩栩如生，被誉为"世界第八大奇迹"。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "specifications": {
         "material": "陶土",
         "dimensions": "兵俑高175-196厘米",
@@ -105,6 +109,7 @@
       "currentLocation": "甘肃省博物馆",
       "rarity": "国宝级",
       "description": "又称"铜奔马"，是汉代青铜艺术的杰作。马身体修长，昂首嘶鸣，三足腾空，一足踏在飞燕背上，表现了骏马凌空飞驰的雄姿，体现了汉代高超的铸造工艺和艺术想象力。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "specifications": {
         "material": "青铜",
         "dimensions": "高34.5厘米，长45厘米",
@@ -116,6 +121,231 @@
       "discoveryStory": "1969年在甘肃武威雷台汉墓中出土，是中国旅游标志，也是甘肃省博物馆的镇馆之宝。",
       "images": [
         "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "四羊方尊",
+      "dynasty": "商朝",
+      "period": "约公元前13世纪",
+      "category": "青铜器",
+      "location": "湖南宁乡",
+      "currentLocation": "中国国家博物馆",
+      "rarity": "国宝级",
+      "description": "商代晚期青铜礼器，以其精美的造型和高超的铸造工艺而著称。器身为长方体，四角各铸一卷角羊头，羊头与羊身结合完美，整体造型既实用又美观。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "越王勾践剑",
+      "dynasty": "春秋",
+      "period": "约公元前5世纪",
+      "category": "兵器",
+      "location": "湖北江陵",
+      "currentLocation": "湖北省博物馆",
+      "rarity": "国宝级",
+      "description": "春秋晚期越国青铜剑，剑身布满菱形纹饰，剑刃锋利无比，历经两千多年仍然寒光闪闪，被誉为"天下第一剑"。剑格正面嵌蓝色琉璃，背面嵌绿松石。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "曾侯乙编钟",
+      "dynasty": "战国",
+      "period": "约公元前5世纪",
+      "category": "乐器",
+      "location": "湖北随州",
+      "currentLocation": "湖北省博物馆",
+      "rarity": "国宝级",
+      "description": "战国早期大型青铜乐器，共65件，分三层悬挂，音域宽广，音色优美。每件编钟都能发出两个乐音，展现了中国古代音乐的高度发展。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "金缕玉衣",
+      "dynasty": "汉朝",
+      "period": "约公元前2世纪",
+      "category": "丧葬用品",
+      "location": "河北满城",
+      "currentLocation": "中国国家博物馆",
+      "rarity": "国宝级",
+      "description": "西汉中山靖王刘胜的殓服，由2498片玉片用金丝连缀而成。玉衣制作工艺复杂，反映了汉代人对玉石的崇拜和对永生的追求。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "长信宫灯",
+      "dynasty": "汉朝",
+      "period": "约公元前2世纪",
+      "category": "生活用品",
+      "location": "河北满城",
+      "currentLocation": "河北博物院",
+      "rarity": "国宝级",
+      "description": "西汉青铜宫灯，宫女手执灯具，衣袖可转动调节光线方向，烟雾通过中空的躯体进入腹腔，设计科学，环保节能。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "三星堆青铜大立人",
+      "dynasty": "商朝",
+      "period": "约公元前12世纪",
+      "category": "青铜器",
+      "location": "四川广汉",
+      "currentLocation": "三星堆博物馆",
+      "rarity": "国宝级",
+      "description": "高达180厘米的青铜立人像，双手环握中空，可能原来握有权杖等器物。人像戴冠，着长袍，赤足立于高台之上，神态庄严肃穆。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "唐三彩骆驼载乐俑",
+      "dynasty": "唐朝",
+      "period": "约公元8世纪",
+      "category": "陶瓷",
+      "location": "陕西西安",
+      "currentLocation": "陕西历史博物馆",
+      "rarity": "一级文物",
+      "description": "盛唐三彩陶俑，骆驼背上载有乐队，展现了丝绸之路上的音乐文化交流。俑身施黄、绿、白三色釉，色彩绚丽，造型生动。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "清明上河图",
+      "dynasty": "宋朝",
+      "period": "约公元12世纪",
+      "category": "书画",
+      "location": "北京故宫",
+      "currentLocation": "故宫博物院",
+      "rarity": "国宝级",
+      "description": "北宋张择端绘制的长卷风俗画，描绘了汴京清明时节的繁华景象。画中有500多个人物，展现了宋代社会的各个层面。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "汝窑天青釉茶盏",
+      "dynasty": "宋朝",
+      "period": "约公元11世纪",
+      "category": "瓷器",
+      "location": "河南宝丰",
+      "currentLocation": "故宫博物院",
+      "rarity": "国宝级",
+      "description": "北宋汝窑瓷器，釉色如天青色，质地温润如玉。汝窑是宋代五大名窑之首，传世品极为珍贵。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "永乐大典",
+      "dynasty": "明朝",
+      "period": "约公元15世纪",
+      "category": "典籍",
+      "location": "北京",
+      "currentLocation": "国家图书馆",
+      "rarity": "国宝级",
+      "description": "明成祖时期编纂的大型类书，共22877卷，是当时世界上最大的百科全书。虽大部分已佚失，现存卷册仍是珍贵的文献资料。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "翡翠白菜",
+      "dynasty": "清朝",
+      "period": "约公元19世纪",
+      "category": "玉器",
+      "location": "北京故宫",
+      "currentLocation": "台北故宫博物院",
+      "rarity": "国宝级",
+      "description": "清代玉雕作品，利用翡翠的天然颜色雕刻而成，形似白菜，上有蝗虫和螽斯，寓意多子多福。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "何家村金银器",
+      "dynasty": "唐朝",
+      "period": "约公元8世纪",
+      "category": "金银器",
+      "location": "陕西西安",
+      "currentLocation": "陕西历史博物馆",
+      "rarity": "国宝级",
+      "description": "唐代金银器窖藏，包含各类金银器皿270余件，工艺精美，装饰华丽。其中鎏金银盒、八瓣团花金杯等展现了唐代金银器制作的最高水平。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "红山文化玉龙",
+      "dynasty": "新石器时代",
+      "period": "约公元前3500年",
+      "category": "玉器",
+      "location": "内蒙古",
+      "currentLocation": "中国国家博物馆",
+      "rarity": "国宝级",
+      "description": "中华第一龙，红山文化的杰出代表，呈C形蜷曲状，造型古朴神秘。此玉龙采用岫岩玉雕琢而成，表面光滑细腻，龙首高昂，身躯修长。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "敦煌莫高窟壁画",
+      "dynasty": "唐朝",
+      "period": "约公元7-10世纪",
+      "category": "壁画",
+      "location": "甘肃敦煌",
+      "currentLocation": "敦煌研究院",
+      "rarity": "世界文化遗产",
+      "description": "唐代丝绸绢画，描绘了当时的社会生活场景。画面色彩鲜艳，人物生动，反映了唐代绘画艺术的高度发展。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "定窑白瓷刻花萱草纹碗",
+      "dynasty": "宋朝",
+      "period": "约公元11世纪",
+      "category": "瓷器",
+      "location": "河北曲阳",
+      "currentLocation": "故宫博物院",
+      "rarity": "一级文物",
+      "description": "北宋定窑白瓷，胎质洁白细腻，釉色莹润如玉。碗内刻有萱草纹，线条流畅，寓意美好。",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "images": [
+        "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
       ]
     }
   ]
