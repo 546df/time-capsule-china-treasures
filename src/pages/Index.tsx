@@ -5,7 +5,7 @@ import { ChevronRight, Search, Calendar, MapPin, Star } from 'lucide-react';
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [barrage, setBarrage] = useState([]);
+  const [barrage, setBarrage] = useState<Array<{id: number, text: string, top: number, speed: number}>>([]);
 
   const dynasties = [
     {
@@ -140,6 +140,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-red-950 to-amber-950 text-white overflow-hidden">
+      {/* CSS styles for scroll animation */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes scroll-left {
+            0% { transform: translateX(100vw); }
+            100% { transform: translateX(-100%); }
+          }
+        `
+      }} />
+
       {/* 动态弹幕 */}
       <div className="fixed inset-0 pointer-events-none z-10">
         {barrage.map((comment) => (
@@ -269,14 +279,6 @@ const Index = () => {
           ))}
         </div>
       </div>
-
-      {/* CSS动画 */}
-      <style jsx>{`
-        @keyframes scroll-left {
-          0% { transform: translateX(100vw); }
-          100% { transform: translateX(-100%); }
-        }
-      `}</style>
     </div>
   );
 };

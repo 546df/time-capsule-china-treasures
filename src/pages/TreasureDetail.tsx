@@ -58,7 +58,7 @@ const TreasureDetail = () => {
     }
   };
 
-  const treasure = treasureData[treasureId] || treasureData['t3'];
+  const treasure = treasureData[treasureId as keyof typeof treasureData] || treasureData['t3'];
 
   const handleShare = () => {
     if (navigator.share) {
@@ -76,6 +76,21 @@ const TreasureDetail = () => {
   const handleDownload = () => {
     // 模拟下载高清图片
     alert('高清图片下载功能暂未开放，请联系管理员');
+  };
+
+  const specificationLabels: Record<string, string> = {
+    material: '材质',
+    dimensions: '尺寸',
+    weight: '重量',
+    craftsmanship: '工艺',
+    decorations: '纹饰'
+  };
+
+  const historyLabels: Record<string, string> = {
+    creation: '制作时期',
+    discovery: '发现时间',
+    excavation: '出土时间',
+    significance: '历史意义'
   };
 
   return (
@@ -213,11 +228,7 @@ const TreasureDetail = () => {
               <div className="space-y-3">
                 {Object.entries(treasure.specifications).map(([key, value]) => (
                   <div key={key} className="flex justify-between">
-                    <span className="text-gray-400">{key === 'material' ? '材质' : 
-                                                     key === 'dimensions' ? '尺寸' :
-                                                     key === 'weight' ? '重量' :
-                                                     key === 'craftsmanship' ? '工艺' :
-                                                     key === 'decorations' ? '纹饰' : key}：</span>
+                    <span className="text-gray-400">{specificationLabels[key] || key}：</span>
                     <span className="text-right max-w-xs">{value}</span>
                   </div>
                 ))}
@@ -231,10 +242,7 @@ const TreasureDetail = () => {
                 {Object.entries(treasure.history).map(([key, value]) => (
                   <div key={key} className="border-l-2 border-yellow-400 pl-4">
                     <div className="font-semibold text-yellow-300 mb-1">
-                      {key === 'creation' ? '制作时期' :
-                       key === 'discovery' ? '发现时间' :
-                       key === 'excavation' ? '出土时间' :
-                       key === 'significance' ? '历史意义' : key}
+                      {historyLabels[key] || key}
                     </div>
                     <div className="text-gray-300">{value}</div>
                   </div>
