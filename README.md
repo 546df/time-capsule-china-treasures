@@ -1,73 +1,163 @@
-# Welcome to your Lovable project
 
-## Project info
+# 中华瑰宝回廊
 
-**URL**: https://lovable.dev/projects/40e0bbf9-a808-4a48-bd05-b40a8201ff99
+一个展示中华五千年文明瑰宝的沉浸式网站项目。
 
-## How can I edit this code?
+## 项目简介
 
-There are several ways of editing your application.
+"中华瑰宝回廊"是一个致力于展示和传承中华文明璀璨瑰宝的在线平台。通过现代化的网页技术，为用户提供一个穿越时空、探索中华文明的数字化体验。
 
-**Use Lovable**
+## 项目特色
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/40e0bbf9-a808-4a48-bd05-b40a8201ff99) and start prompting.
+### 🎨 设计特色
+- **沉浸式体验**：采用渐变背景和动态效果，营造穿越时空的视觉体验
+- **传统与现代融合**：使用传统文化元素结合现代设计理念
+- **响应式设计**：完美适配各种设备屏幕
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🌟 核心功能
+- **首页展示**：英雄区域展示、精品文物轮播、朝代导航
+- **历史时间轴**：按时间顺序展示各朝代重要文物
+- **文物画廊**：按朝代分类展示文物，支持筛选和详情查看
+- **智能搜索**：支持文物名称、朝代、关键词搜索，提供搜索建议
+- **文物地图**：按地理位置展示文物分布情况
+- **动态弹幕**：实时展示用户评论，增强互动体验
 
-**Use your preferred IDE**
+### 🎯 技术亮点
+- 纯HTML、CSS、JavaScript实现，无框架依赖
+- 模块化JavaScript代码结构
+- CSS3动画和过渡效果
+- 响应式布局设计
+- 本地存储功能
+- 图片懒加载优化
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 项目结构
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+中华瑰宝回廊/
+├── index.html              # 主页面
+├── timeline.html            # 历史时间轴页面
+├── gallery.html             # 文物画廊页面
+├── search.html              # 搜索页面
+├── map.html                 # 文物地图页面
+├── styles/                  # 样式文件目录
+│   ├── main.css            # 主要样式
+│   ├── barrage.css         # 弹幕样式
+│   ├── timeline.css        # 时间轴样式
+│   ├── gallery.css         # 画廊样式
+│   ├── search.css          # 搜索样式
+│   └── map.css             # 地图样式
+├── scripts/                 # JavaScript文件目录
+│   ├── main.js             # 主要功能
+│   ├── barrage.js          # 弹幕系统
+│   ├── carousel.js         # 轮播功能
+│   ├── timeline.js         # 时间轴功能
+│   ├── gallery.js          # 画廊功能
+│   ├── search.js           # 搜索功能
+│   └── map.js              # 地图功能
+├── data/                    # 数据文件目录
+│   ├── treasures.json      # 文物数据
+│   └── dynasties.json      # 朝代数据
+└── README.md               # 项目说明文档
 ```
 
-**Edit a file directly in GitHub**
+## 文物收录
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+项目收录了从商朝到清朝各个历史时期的重要文物，包括：
 
-**Use GitHub Codespaces**
+### 商朝（约公元前1600-1046年）
+- 司母戊鼎 - 世界最大的青铜鼎
+- 妇好鸮尊 - 商代青铜酒器精品
+- 甲骨文 - 中国最早的文字记录
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 周朝（公元前1046-256年）
+- 毛公鼎 - 铭文最长的青铜器
+- 大盂鼎 - 西周青铜重器
+- 散氏盘 - 土地契约青铜器
 
-## What technologies are used for this project?
+### 秦朝（公元前221-206年）
+- 兵马俑 - 世界第八大奇迹
+- 青铜剑 - 秦代制式兵器
+- 秦始皇印 - 皇权象征
 
-This project is built with:
+### 汉朝（公元前206-220年）
+- 马踏飞燕 - 中国旅游标志
+- 金缕玉衣 - 汉代皇室葬服
+- 长信宫灯 - 环保理念古代明灯
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 唐朝（618-907年）
+- 唐三彩 - 盛唐陶瓷艺术
+- 步辇图 - 外交场面名画
+- 何家村金银器 - 金银工艺巅峰
 
-## How can I deploy this project?
+### 宋朝（960-1279年）
+- 清明上河图 - 描绘宋代城市生活
+- 汝窑瓷器 - 宋代瓷器之冠
+- 宋版书籍 - 印刷术完美体现
 
-Simply open [Lovable](https://lovable.dev/projects/40e0bbf9-a808-4a48-bd05-b40a8201ff99) and click on Share -> Publish.
+### 明朝（1368-1644年）
+- 永乐大典 - 世界最大百科全书
+- 景德镇瓷器 - 明代瓷器工艺巅峰
+- 郑和宝船 - 海上丝绸之路见证
 
-## Can I connect a custom domain to my Lovable project?
+### 清朝（1644-1912年）
+- 四库全书 - 中华文化集大成
+- 翡翠白菜 - 清代玉雕精品
+- 九龙壁 - 皇家建筑装饰艺术
 
-Yes, you can!
+## 使用说明
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. **本地运行**：
+   - 下载项目文件
+   - 使用现代浏览器打开 `index.html`
+   - 推荐使用 Chrome、Firefox、Safari 等浏览器
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+2. **功能导航**：
+   - 首页：项目介绍和文物概览
+   - 时间轴：按历史时期浏览文物
+   - 画廊：按朝代筛选查看文物
+   - 搜索：快速查找特定文物
+   - 地图：了解文物地理分布
+
+3. **交互体验**：
+   - 点击文物卡片查看详细信息
+   - 使用筛选器缩小搜索范围
+   - 观看动态弹幕了解其他用户观点
+   - 体验滚动动画和悬停效果
+
+## 浏览器兼容性
+
+- Chrome 60+
+- Firefox 55+
+- Safari 12+
+- Edge 79+
+
+## 开发说明
+
+本项目采用原生Web技术开发，便于学习和定制：
+
+- **HTML5**：语义化标签，良好的结构
+- **CSS3**：现代样式特性，动画效果
+- **JavaScript ES6+**：模块化开发，现代语法
+- **JSON**：结构化数据存储
+
+## 贡献指南
+
+欢迎为项目贡献代码或建议：
+
+1. Fork 本项目
+2. 创建功能分支
+3. 提交更改
+4. 发起 Pull Request
+
+## 版权说明
+
+本项目仅用于学习和展示目的，文物图片和信息来源于公开资料。如有版权问题，请联系作者。
+
+## 联系方式
+
+- 邮箱：contact@treasures.cn
+- 电话：400-000-0000
+
+---
+
+**中华瑰宝回廊** - 传承文明，弘扬文化 🏛️

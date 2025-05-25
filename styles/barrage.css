@@ -7,48 +7,31 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
+    z-index: 500;
     overflow: hidden;
 }
 
 .barrage-item {
     position: absolute;
-    color: rgba(255, 215, 0, 0.8);
-    font-size: 14px;
-    font-weight: 500;
     white-space: nowrap;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    animation: barrage-move linear infinite;
-    pointer-events: none;
-    z-index: 1;
+    font-size: 14px;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    animation: barrageMove 8s linear infinite;
+    opacity: 0.8;
+    font-weight: 500;
 }
 
-.barrage-item:nth-child(odd) {
-    color: rgba(255, 179, 71, 0.8);
-}
-
-.barrage-item:nth-child(3n) {
-    color: rgba(255, 107, 53, 0.8);
-}
-
-.barrage-item:nth-child(4n) {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.barrage-item:nth-child(5n) {
-    color: rgba(135, 206, 235, 0.8);
-}
-
-@keyframes barrage-move {
+@keyframes barrageMove {
     0% {
         transform: translateX(100vw);
         opacity: 0;
     }
-    5% {
-        opacity: 1;
+    10% {
+        opacity: 0.8;
     }
-    95% {
-        opacity: 1;
+    90% {
+        opacity: 0.8;
     }
     100% {
         transform: translateX(-100%);
@@ -56,54 +39,22 @@
     }
 }
 
-/* 弹幕特效 */
-.barrage-item.glow {
-    text-shadow: 
-        0 0 5px currentColor,
-        0 0 10px currentColor,
-        0 0 15px currentColor,
-        1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.barrage-item.large {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.barrage-item.small {
-    font-size: 12px;
-    opacity: 0.6;
-}
-
-/* 不同速度的弹幕 */
-.barrage-item.speed-slow {
-    animation-duration: 15s;
-}
-
-.barrage-item.speed-normal {
+.barrage-item:nth-child(2n) {
+    color: #ff8c00;
     animation-duration: 10s;
 }
 
-.barrage-item.speed-fast {
-    animation-duration: 6s;
+.barrage-item:nth-child(3n) {
+    color: #87ceeb;
+    animation-duration: 12s;
 }
 
-/* 弹幕暂停控制 */
+.barrage-item:nth-child(5n) {
+    color: #98fb98;
+    animation-duration: 9s;
+}
+
+/* 弹幕暂停效果 */
 .barrage-paused .barrage-item {
     animation-play-state: paused;
-}
-
-/* 响应式弹幕 */
-@media (max-width: 768px) {
-    .barrage-item {
-        font-size: 12px;
-    }
-    
-    .barrage-item.large {
-        font-size: 14px;
-    }
-    
-    .barrage-item.small {
-        font-size: 10px;
-    }
 }

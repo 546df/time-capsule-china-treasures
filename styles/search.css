@@ -1,0 +1,221 @@
+
+.search-main {
+    padding: 100px 2rem 2rem;
+    min-height: 100vh;
+}
+
+.search-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-header h1 {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 1rem;
+}
+
+#searchInput::placeholder {
+    color: #ccc;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+#searchBtn {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #ffd700, #ff8c00);
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#searchBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.search-filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-filters select {
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-filters select:focus {
+    outline: none;
+    border-color: #ffd700;
+}
+
+.search-filters option {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.search-results {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3);
+    border-color: #ffd700;
+}
+
+.result-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.result-card-content {
+    padding: 1.5rem;
+}
+
+.result-card h3 {
+    color: #ffd700;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-card .dynasty {
+    color: #ff8c00;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-card .category {
+    display: inline-block;
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.result-card .description {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.results-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.results-count {
+    color: #ffd700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.results-sort {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.sort-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.sort-btn:hover,
+.sort-btn.active {
+    background: linear-gradient(45deg, #ffd700, #ff8c00);
+    color: #000;
+    border-color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .search-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .search-filters select {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .results-sort {
+        justify-content: center;
+    }
+}

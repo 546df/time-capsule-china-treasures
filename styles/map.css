@@ -1,0 +1,201 @@
+
+.map-main {
+    padding: 100px 2rem 2rem;
+    min-height: 100vh;
+}
+
+.map-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.map-header h1 {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.map-header p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    overflow: hidden;
+}
+
+.map-canvas {
+    height: 500px;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-placeholder {
+    text-align: center;
+    color: #fff;
+}
+
+.map-placeholder h3 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.map-controls {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.province-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.province-btn {
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.province-btn:hover,
+.province-btn.active {
+    background: linear-gradient(45deg, #ffd700, #ff8c00);
+    color: #000;
+    border-color: #ffd700;
+    transform: translateY(-2px);
+}
+
+.map-info {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.map-info h3 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.province-treasures {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.province-treasure {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.province-treasure:hover {
+    border-color: #ffd700;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+.province-treasure img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.province-treasure h4 {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.province-treasure .location {
+    color: #ff8c00;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.province-treasure .description {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.map-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.legend-color.shang { background: #ffd700; }
+.legend-color.zhou { background: #ff8c00; }
+.legend-color.qin { background: #87ceeb; }
+.legend-color.han { background: #98fb98; }
+.legend-color.tang { background: #dda0dd; }
+.legend-color.song { background: #f0e68c; }
+.legend-color.ming { background: #ff69b4; }
+.legend-color.qing { background: #20b2aa; }
+
+@media (max-width: 768px) {
+    .map-canvas {
+        height: 300px;
+    }
+    
+    .province-buttons {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .province-btn {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    .province-treasures {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-legend {
+        flex-direction: column;
+        align-items: center;
+    }
+}

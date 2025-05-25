@@ -7,11 +7,9 @@
     <title>历史时间轴 - 中华瑰宝回廊</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/timeline.css">
-    <link rel="stylesheet" href="styles/barrage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="barrage-container"></div>
-    
     <!-- 导航 -->
     <nav class="main-nav">
         <div class="nav-container">
@@ -29,41 +27,18 @@
         </div>
     </nav>
 
-    <!-- 时间轴标题 -->
-    <section class="timeline-header">
-        <h1 class="timeline-title">中华文明时间轴</h1>
-        <p class="timeline-subtitle">穿越五千年历史长河，探寻文明足迹</p>
-        
-        <!-- 时间轴导航 -->
-        <div class="timeline-nav">
-            <button class="timeline-nav-btn active" data-dynasty="all">全部</button>
-            <button class="timeline-nav-btn" data-dynasty="shang">商朝</button>
-            <button class="timeline-nav-btn" data-dynasty="zhou">周朝</button>
-            <button class="timeline-nav-btn" data-dynasty="qin">秦朝</button>
-            <button class="timeline-nav-btn" data-dynasty="han">汉朝</button>
-            <button class="timeline-nav-btn" data-dynasty="tang">唐朝</button>
-            <button class="timeline-nav-btn" data-dynasty="song">宋朝</button>
-            <button class="timeline-nav-btn" data-dynasty="ming">明朝</button>
-            <button class="timeline-nav-btn" data-dynasty="qing">清朝</button>
+    <!-- 时间轴内容 -->
+    <main class="timeline-main">
+        <div class="timeline-header">
+            <h1>中华文明时间轴</h1>
+            <p>探索五千年华夏文明的璀璨历程</p>
         </div>
-    </section>
 
-    <!-- 时间轴主体 -->
-    <section class="timeline-container">
-        <div class="timeline-line"></div>
-        <div class="timeline-content" id="timelineContent"></div>
-    </section>
-
-    <!-- 详情模态框 -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal-content" id="modalContent">
-            <button class="modal-close" id="modalClose">×</button>
-            <div class="modal-body" id="modalBody"></div>
+        <div class="timeline-container" id="timelineContainer">
+            <!-- 时间轴内容将通过JavaScript动态加载 -->
         </div>
-    </div>
+    </main>
 
-    <script src="scripts/main.js"></script>
-    <script src="scripts/barrage.js"></script>
     <script src="scripts/timeline.js"></script>
 </body>
 </html>

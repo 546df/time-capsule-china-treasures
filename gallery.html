@@ -7,11 +7,9 @@
     <title>文物画廊 - 中华瑰宝回廊</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/gallery.css">
-    <link rel="stylesheet" href="styles/barrage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="barrage-container"></div>
-    
     <!-- 导航 -->
     <nav class="main-nav">
         <div class="nav-container">
@@ -29,57 +27,38 @@
         </div>
     </nav>
 
-    <!-- 画廊标题 -->
-    <section class="gallery-header">
-        <h1 class="gallery-title">文物画廊</h1>
-        <p class="gallery-subtitle">沉浸式欣赏中华文物之美</p>
-        
-        <!-- 筛选器 -->
-        <div class="gallery-filters">
-            <select id="dynastyFilter" class="filter-select">
-                <option value="all">所有朝代</option>
-                <option value="shang">商朝</option>
-                <option value="zhou">周朝</option>
-                <option value="qin">秦朝</option>
-                <option value="han">汉朝</option>
-                <option value="tang">唐朝</option>
-                <option value="song">宋朝</option>
-                <option value="ming">明朝</option>
-                <option value="qing">清朝</option>
-            </select>
-            <select id="categoryFilter" class="filter-select">
-                <option value="all">所有类别</option>
-                <option value="bronze">青铜器</option>
-                <option value="ceramics">陶瓷</option>
-                <option value="jade">玉器</option>
-                <option value="calligraphy">书画</option>
-                <option value="weapons">兵器</option>
-                <option value="gold">金银器</option>
-                <option value="stone">石器</option>
-                <option value="lacquer">漆器</option>
-            </select>
-            <div class="view-toggle">
-                <button class="view-btn active" data-view="grid">网格</button>
-                <button class="view-btn" data-view="list">列表</button>
+    <!-- 画廊内容 -->
+    <main class="gallery-main">
+        <div class="gallery-header">
+            <h1>文物画廊</h1>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-dynasty="all">全部</button>
+                <button class="filter-btn" data-dynasty="商朝">商朝</button>
+                <button class="filter-btn" data-dynasty="周朝">周朝</button>
+                <button class="filter-btn" data-dynasty="秦朝">秦朝</button>
+                <button class="filter-btn" data-dynasty="汉朝">汉朝</button>
+                <button class="filter-btn" data-dynasty="唐朝">唐朝</button>
+                <button class="filter-btn" data-dynasty="宋朝">宋朝</button>
+                <button class="filter-btn" data-dynasty="明朝">明朝</button>
+                <button class="filter-btn" data-dynasty="清朝">清朝</button>
             </div>
         </div>
-    </section>
 
-    <!-- 画廊内容 -->
-    <section class="gallery-container">
-        <div class="gallery-grid" id="galleryGrid"></div>
-    </section>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- 画廊内容将通过JavaScript动态加载 -->
+        </div>
+    </main>
 
     <!-- 文物详情模态框 -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal-content large" id="modalContent">
-            <button class="modal-close" id="modalClose">×</button>
-            <div class="modal-body" id="modalBody"></div>
+    <div class="modal" id="treasureModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- 模态框内容将动态填充 -->
+            </div>
         </div>
     </div>
 
-    <script src="scripts/main.js"></script>
-    <script src="scripts/barrage.js"></script>
     <script src="scripts/gallery.js"></script>
 </body>
 </html>

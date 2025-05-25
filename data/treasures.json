@@ -4,92 +4,119 @@
     {
       "id": 1,
       "name": "司母戊鼎",
-      "dynasty": "shang",
-      "dynastyName": "商朝",
-      "period": "约公元前1300-1046年",
-      "category": "bronze",
-      "level": "national",
+      "dynasty": "商朝",
+      "period": "约公元前1300年",
+      "category": "青铜器",
       "location": "河南安阳",
-      "discoveryYear": 1939,
-      "material": "青铜",
-      "dimensions": "高133cm，口长110cm，口宽79cm，重832.84kg",
-      "description": "司母戊鼎是中国商朝后期王室祭祀用的青铜方鼎，是世界上现存最大最重的青铜礼器。鼎腹内壁铸有'司母戊'三字，是商王祖庚或祖甲为祭祀其母戊而制作的。造型雄浑庄重，纹饰繁缛华美，充分体现了商代青铜铸造工艺的最高水平。",
-      "significance": "代表了中国古代青铜铸造技术的巅峰，是研究商代政治制度、宗教信仰和工艺技术的重要实物资料。",
-      "image": "/placeholder.svg",
-      "video": "",
-      "coordinates": [114.35, 36.10]
+      "currentLocation": "中国国家博物馆",
+      "rarity": "国宝级",
+      "description": "商朝后期王室用鼎，重达832.84公斤，是世界上现存最大最重的青铜礼器。鼎腹内壁铸有"司母戊"三字，为商王祖庚或祖甲为祭祀母亲戊而铸造。鼎形制雄伟，纹饰庄重，体现了商代青铜铸造技术的最高水平。",
+      "specifications": {
+        "material": "青铜",
+        "dimensions": "高133厘米，口长110厘米，口宽79厘米",
+        "weight": "832.84公斤",
+        "craftsmanship": "范铸法",
+        "decorations": "饕餮纹、夔纹"
+      },
+      "historicalSignificance": "证实了商朝的强大国力和高超的青铜铸造技术，是研究商代政治、宗教、艺术的重要实物资料。",
+      "discoveryStory": "1939年3月在河南安阳武官村被当地农民发现，因抗日战争爆发而被重新埋藏，直到1946年6月才正式出土。",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
+      ]
     },
     {
       "id": 2,
-      "name": "越王勾践剑",
-      "dynasty": "zhou",
-      "dynastyName": "春秋时期",
-      "period": "公元前6-5世纪",
-      "category": "weapons",
-      "level": "national",
-      "location": "湖北荆州",
-      "discoveryYear": 1965,
-      "material": "青铜",
-      "dimensions": "通长55.7cm，宽4.6cm，柄长8.4cm，重875g",
-      "description": "越王勾践剑是春秋晚期越国青铜器，剑身修长，中脊起棱，两从刃锋利，寒光逼人。剑格正面和反面都用蓝色琉璃和绿松石镶嵌成美丽的纹饰。剑身近格处有两行鸟篆铭文：'越王鸠浅，自作用剑'。经过两千多年，剑身依然光亮平滑，锋利无比，堪称天下第一剑。",
-      "significance": "体现了春秋时期越国高超的冶金技术和工艺水平，是中国古代兵器制造史上的杰作。",
-      "image": "/placeholder.svg",
-      "video": "",
-      "coordinates": [112.24, 30.33]
+      "name": "妇好鸮尊",
+      "dynasty": "商朝",
+      "period": "约公元前1200年",
+      "category": "青铜器",
+      "location": "河南安阳",
+      "currentLocation": "中国社会科学院考古研究所",
+      "rarity": "国宝级",
+      "description": "商代青铜酒器，以鸮（猫头鹰）为造型，线条流畅，纹饰精美。鸮在商代被视为战神，此尊出土于妇好墓，体现了商代女性的崇高地位和精湛的青铜铸造工艺。",
+      "specifications": {
+        "material": "青铜",
+        "dimensions": "高45.9厘米",
+        "weight": "16.7公斤",
+        "craftsmanship": "失蜡法铸造",
+        "decorations": "鸮纹、云雷纹"
+      },
+      "historicalSignificance": "妇好是商王武丁的王后，也是中国历史上有据可查的第一位女将军。此尊体现了商代女性的重要地位。",
+      "discoveryStory": "1976年在河南安阳小屯村妇好墓中出土，是妇好墓中出土的468件青铜器之一。",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
     },
     {
       "id": 3,
-      "name": "兵马俑",
-      "dynasty": "qin",
-      "dynastyName": "秦朝",
-      "period": "公元前259-210年",
-      "category": "stone",
-      "level": "national",
-      "location": "陕西西安",
-      "discoveryYear": 1974,
-      "material": "陶土",
-      "dimensions": "一号坑：长230m，宽62m，总面积14,260平方米",
-      "description": "秦始皇兵马俑是秦始皇陵的一部分，被誉为'世界第八大奇迹'。俑坑内共有陶俑、陶马近8000件，每个兵俑的面貌、神态、姿势、装束都不相同，堪称古代雕塑艺术的宝库。兵马俑的发现，为研究秦代的军事、政治、经济、文化、艺术等提供了极其珍贵的实物资料。",
-      "significance": "展现了秦代军队的雄伟气势和高超的制陶工艺，是中国古代陶塑艺术的杰作。",
-      "image": "/placeholder.svg",
-      "video": "",
-      "coordinates": [109.27, 34.38]
+      "name": "毛公鼎",
+      "dynasty": "周朝",
+      "period": "约公元前9世纪",
+      "category": "青铜器",
+      "location": "陕西岐山",
+      "currentLocation": "台北故宫博物院",
+      "rarity": "国宝级",
+      "description": "西周晚期青铜器，因铭文中有"毛公"字样而得名。铭文共32行，497字，是已知西周青铜器铭文中最长的一篇，记录了周宣王册命毛公的史实。",
+      "specifications": {
+        "material": "青铜",
+        "dimensions": "高53.8厘米，口径47.9厘米",
+        "weight": "34.5公斤",
+        "craftsmanship": "范铸法",
+        "decorations": "重环纹、垂鳞纹"
+      },
+      "historicalSignificance": "铭文详细记录了西周晚期的政治制度和社会状况，是研究西周历史的重要史料。",
+      "discoveryStory": "清道光二十三年(1843年)在陕西岐山出土，后几经辗转，现藏于台北故宫博物院。",
+      "images": [
+        "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
+      ]
     },
     {
       "id": 4,
-      "name": "马踏飞燕",
-      "dynasty": "han",
-      "dynastyName": "东汉",
-      "period": "公元25-220年",
-      "category": "bronze",
-      "level": "national",
-      "location": "甘肃武威",
-      "discoveryYear": 1969,
-      "material": "青铜",
-      "dimensions": "高34.5cm，长45cm，宽13cm",
-      "description": "马踏飞燕又名'马超龙雀'，是东汉时期的青铜艺术珍品。作品构思巧妙，飞马三足腾空，一足踏在一只飞鸟上，飞鸟回首惊顾，表现出骏马凌空飞腾的神韵。整体造型生动传神，比例协调，铸造工艺精湛，体现了汉代青铜艺术的高度成就。",
-      "significance": "代表了汉代青铜铸造艺术的最高水平，是中国古代艺术品中的瑰宝。",
-      "image": "/placeholder.svg",
-      "video": "",
-      "coordinates": [102.64, 37.93]
+      "name": "兵马俑",
+      "dynasty": "秦朝",
+      "period": "约公元前210年",
+      "category": "陶俑",
+      "location": "陕西西安",
+      "currentLocation": "秦始皇帝陵博物院",
+      "rarity": "世界文化遗产",
+      "description": "秦始皇陵兵马俑是世界考古史上最伟大的发现之一。数千个陶制士兵、战马和战车排列整齐，形态各异，栩栩如生，被誉为"世界第八大奇迹"。",
+      "specifications": {
+        "material": "陶土",
+        "dimensions": "兵俑高175-196厘米",
+        "quantity": "约8000件",
+        "craftsmanship": "模塑结合手工雕刻",
+        "decorations": "彩绘（大部分已脱落）"
+      },
+      "historicalSignificance": "展现了秦朝军队的组织结构和装备情况，体现了秦始皇的雄才大略和当时高超的制陶工艺。",
+      "discoveryStory": "1974年3月，当地农民在打井时意外发现，经过几十年的发掘，共发现三个兵马俑坑。",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
+      ]
     },
     {
       "id": 5,
-      "name": "唐三彩骆驼载乐俑",
-      "dynasty": "tang",
-      "dynastyName": "唐朝",
-      "period": "618-907年",
-      "category": "ceramics",
-      "level": "first",
-      "location": "陕西西安",
-      "discoveryYear": 1957,
-      "material": "三彩陶",
-      "dimensions": "高58.4cm，长41.3cm",
-      "description": "唐三彩骆驼载乐俑生动地反映了唐代丝绸之路上的商贸往来和文化交流。骆驼昂首嘶鸣，驮载着乐队，乐师们身着胡服，神态各异，有的弹琵琶，有的吹筚篥，有的打拍板。釉色鲜艳，造型生动，工艺精美，是唐三彩艺术的杰出代表。",
-      "significance": "展现了唐代开放包容的文化特色和丝绸之路上的繁荣景象。",
-      "image": "/placeholder.svg",
-      "video": "",
-      "coordinates": [108.94, 34.27]
+      "name": "马踏飞燕",
+      "dynasty": "汉朝",
+      "period": "约公元2世纪",
+      "category": "青铜器",
+      "location": "甘肃武威",
+      "currentLocation": "甘肃省博物馆",
+      "rarity": "国宝级",
+      "description": "又称"铜奔马"，是汉代青铜艺术的杰作。马身体修长，昂首嘶鸣，三足腾空，一足踏在飞燕背上，表现了骏马凌空飞驰的雄姿，体现了汉代高超的铸造工艺和艺术想象力。",
+      "specifications": {
+        "material": "青铜",
+        "dimensions": "高34.5厘米，长45厘米",
+        "weight": "7.15公斤",
+        "craftsmanship": "失蜡法铸造",
+        "decorations": "简洁流畅的线条"
+      },
+      "historicalSignificance": "体现了汉代张骞通西域后，中原地区对西域良马的重视，是丝绸之路文化交流的象征。",
+      "discoveryStory": "1969年在甘肃武威雷台汉墓中出土，是中国旅游标志，也是甘肃省博物馆的镇馆之宝。",
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+      ]
     }
   ]
 }
