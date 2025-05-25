@@ -4,76 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中华瑰宝回廊 - 探索五千年文明瑰宝</title>
+    <title>中华瑰宝回廊</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/barrage.css">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="barrage-container"></div>
     
-    <!-- 顶部导航 -->
+    <!-- 导航 -->
     <nav class="main-nav">
         <div class="nav-container">
             <div class="logo-section">
                 <div class="logo-icon">瑰</div>
-                <h1 class="site-title">中华瑰宝回廊</h1>
+                <a href="index.html" class="site-title">中华瑰宝回廊</a>
             </div>
             <div class="nav-links">
-                <a href="timeline.html" class="nav-link">
-                    <span class="nav-icon">📅</span>
-                    <span>时间轴</span>
-                </a>
-                <a href="search.html" class="nav-link">
-                    <span class="nav-icon">🔍</span>
-                    <span>搜索</span>
-                </a>
-                <a href="gallery.html" class="nav-link">
-                    <span class="nav-icon">🖼️</span>
-                    <span>画廊</span>
-                </a>
-                <a href="map.html" class="nav-link">
-                    <span class="nav-icon">🗺️</span>
-                    <span>文物地图</span>
-                </a>
+                <a href="index.html" class="nav-link active">首页</a>
+                <a href="timeline.html" class="nav-link">时间轴</a>
+                <a href="search.html" class="nav-link">搜索</a>
+                <a href="gallery.html" class="nav-link">画廊</a>
+                <a href="map.html" class="nav-link">文物地图</a>
             </div>
         </div>
     </nav>
 
     <!-- 英雄区域 -->
     <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-content">
-            <h2 class="hero-title">五千年文明瑰宝</h2>
-            <p class="hero-description">
-                踏上时光之旅，探索中华文明的璀璨宝藏，感受古代匠人的精湛技艺与无穷智慧
-            </p>
-            <a href="timeline.html" class="cta-button">
-                开始探索之旅
-                <span class="arrow">→</span>
-            </a>
-        </div>
-        <div class="hero-visual">
-            <div class="rotating-treasures" id="rotatingTreasures"></div>
+            <h1 class="hero-title">中华瑰宝回廊</h1>
+            <p class="hero-subtitle">穿越五千年文明，探寻璀璨宝藏</p>
+            <a href="timeline.html" class="cta-button">开始探索之旅</a>
         </div>
     </section>
 
-    <!-- 特色文物展示 -->
-    <section class="featured-section">
-        <h3 class="section-title">镇馆之宝</h3>
-        <div class="featured-carousel" id="featuredCarousel">
-            <div class="carousel-track" id="carouselTrack"></div>
-            <div class="carousel-controls">
-                <button class="carousel-btn prev" id="prevBtn">‹</button>
-                <button class="carousel-btn next" id="nextBtn">›</button>
-            </div>
-            <div class="carousel-indicators" id="carouselIndicators"></div>
+    <!-- 旋转画廊 -->
+    <section class="rotating-gallery">
+        <h2 class="section-title">精品文物展示</h2>
+        <div class="gallery-container" id="galleryContainer">
+            <div class="gallery-track" id="galleryTrack"></div>
+        </div>
+        <div class="gallery-controls">
+            <button class="gallery-btn" id="prevBtn">←</button>
+            <button class="gallery-btn" id="nextBtn">→</button>
         </div>
     </section>
 
-    <!-- 朝代网格 -->
-    <section class="dynasties-section">
-        <h3 class="section-title">历代王朝</h3>
-        <div class="dynasties-grid" id="dynastiesGrid"></div>
+    <!-- 朝代导航 -->
+    <section class="dynasty-grid">
+        <h2 class="section-title">历代珍宝</h2>
+        <div class="dynasty-container" id="dynastyContainer"></div>
     </section>
 
     <!-- 统计信息 -->
@@ -84,16 +69,16 @@
                 <div class="stat-label">年文明史</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">30+</div>
-                <div class="stat-label">珍贵文物</div>
+                <div class="stat-number">50+</div>
+                <div class="stat-label">精品文物</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">8</div>
-                <div class="stat-label">历史朝代</div>
+                <div class="stat-label">主要朝代</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">文化传承</div>
+                <div class="stat-number">100+</div>
+                <div class="stat-label">博物馆藏品</div>
             </div>
         </div>
     </section>
@@ -101,15 +86,31 @@
     <!-- 页脚 -->
     <footer class="main-footer">
         <div class="footer-content">
-            <p>&copy; 2024 中华瑰宝回廊. 传承文明，弘扬文化.</p>
-            <div class="footer-links">
-                <a href="about.html">关于我们</a>
-                <a href="contact.html">联系方式</a>
-                <a href="help.html">帮助中心</a>
+            <div class="footer-section">
+                <h3>中华瑰宝回廊</h3>
+                <p>传承文明，弘扬文化</p>
             </div>
+            <div class="footer-section">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="timeline.html">时间轴</a></li>
+                    <li><a href="gallery.html">文物画廊</a></li>
+                    <li><a href="search.html">搜索</a></li>
+                    <li><a href="map.html">文物地图</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p>邮箱: contact@treasures.cn</p>
+                <p>电话: 400-000-0000</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 中华瑰宝回廊. 保留所有权利.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/barrage.js"></script>
     <script src="scripts/carousel.js"></script>
