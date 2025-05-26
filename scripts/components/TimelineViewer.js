@@ -45,7 +45,7 @@ class TimelineViewer {
                     <div class="timeline-treasures">
                         ${period.treasures.map(treasure => this.createTreasureMini(treasure)).join('')}
                     </div>
-                    <button class="timeline-btn" onclick="timelineViewer.showPeriodDetail(${index})">
+                    <button class="timeline-btn" data-period-index="${index}">
                         详细了解
                     </button>
                 </div>
@@ -71,6 +71,16 @@ class TimelineViewer {
 
     addInteractions() {
         document.addEventListener('click', (e) => {
+            // 处理详细了解按钮点击
+            if (e.target.closest('.timeline-btn')) {
+                const button = e.target.closest('.timeline-btn');
+                const periodIndex = button.dataset.periodIndex;
+                if (periodIndex !== undefined) {
+                    this.showPeriodDetail(parseInt(periodIndex));
+                }
+            }
+            
+            // 处理文物缩略图点击
             if (e.target.closest('.treasure-mini')) {
                 const treasureName = e.target.closest('.treasure-mini').dataset.treasure;
                 this.modal.showTreasureDetail(treasureName, this.timelineData);

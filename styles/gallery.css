@@ -12,7 +12,90 @@
 .gallery-header h1 {
     font-size: 3rem;
     color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.gallery-header p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
     margin-bottom: 2rem;
+}
+
+/* 统计信息样式 - 横向排列 */
+.gallery-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    min-width: 150px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    color: #ff8c00;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* 搜索容器样式 */
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    padding-right: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-icon {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    pointer-events: none;
 }
 
 .gallery-filters {
@@ -20,6 +103,7 @@
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .filter-btn {
@@ -38,6 +122,17 @@
     background: linear-gradient(45deg, #ffd700, #ff8c00);
     color: #000;
     border-color: #ffd700;
+}
+
+.display-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.display-count {
+    color: #ff8c00;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .gallery-grid {
@@ -185,7 +280,21 @@
     font-size: 1.1rem;
 }
 
+/* 响应式设计 */
 @media (max-width: 768px) {
+    .gallery-stats {
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        min-width: 120px;
+        padding: 0.8rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
     .gallery-filters {
         justify-content: center;
     }
@@ -207,5 +316,18 @@
     
     .modal-treasure-meta {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        width: 100%;
+        max-width: 200px;
     }
 }
