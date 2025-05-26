@@ -30,17 +30,40 @@
     <!-- 画廊内容 -->
     <main class="gallery-main">
         <div class="gallery-header">
-            <h1>文物画廊</h1>
+            <h1>中华瑰宝画廊</h1>
+            <p>探索跨越数千年的珍贵文物，感受中华文明的博大精深</p>
+            
+            <!-- 统计信息 -->
+            <div class="gallery-stats">
+                <!-- 统计数据将通过JavaScript动态加载 -->
+            </div>
+            
+            <!-- 搜索框 -->
+            <div class="search-container">
+                <input type="text" id="treasureSearch" placeholder="搜索文物名称、朝代、地点..." class="search-input">
+                <span class="search-icon">🔍</span>
+            </div>
+            
+            <!-- 筛选按钮 -->
             <div class="gallery-filters">
-                <button class="filter-btn active" data-dynasty="all">全部</button>
+                <button class="filter-btn active" data-dynasty="all">全部文物</button>
+                <button class="filter-btn" data-dynasty="新石器时代">新石器时代</button>
+                <button class="filter-btn" data-dynasty="夏朝">夏朝</button>
                 <button class="filter-btn" data-dynasty="商朝">商朝</button>
                 <button class="filter-btn" data-dynasty="周朝">周朝</button>
                 <button class="filter-btn" data-dynasty="秦朝">秦朝</button>
                 <button class="filter-btn" data-dynasty="汉朝">汉朝</button>
+                <button class="filter-btn" data-dynasty="魏晋南北朝">魏晋南北朝</button>
                 <button class="filter-btn" data-dynasty="唐朝">唐朝</button>
                 <button class="filter-btn" data-dynasty="宋朝">宋朝</button>
+                <button class="filter-btn" data-dynasty="元朝">元朝</button>
                 <button class="filter-btn" data-dynasty="明朝">明朝</button>
                 <button class="filter-btn" data-dynasty="清朝">清朝</button>
+            </div>
+            
+            <!-- 显示数量 -->
+            <div class="display-info">
+                <span class="display-count">显示 38 件文物</span>
             </div>
         </div>
 
