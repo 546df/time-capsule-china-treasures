@@ -1,13 +1,13 @@
 
-// Main timeline functionality - refactored
-import { timelineData } from './data/timelineData.js';
-import { TimelineModal } from './components/TimelineModal.js';
-import { TimelineNavigation } from './components/TimelineNavigation.js';
-import { TimelineAnimations } from './components/TimelineAnimations.js';
+// Timeline viewer entry point
+import { TimelineData } from './TimelineData.js';
+import { TimelineModal } from './TimelineModal.js';
+import { TimelineNavigation } from './TimelineNavigation.js';
+import { TimelineAnimations } from './TimelineAnimations.js';
 
 class TimelineViewer {
     constructor() {
-        this.timelineData = timelineData;
+        this.timelineData = TimelineData.getData();
         this.init();
     }
 
