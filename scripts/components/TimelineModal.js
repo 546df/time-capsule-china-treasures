@@ -1,4 +1,3 @@
-
 // Timeline modal functionality
 export class TimelineModal {
     constructor() {
@@ -15,11 +14,11 @@ export class TimelineModal {
         modal.id = 'periodModal';
         modal.className = 'period-modal';
         modal.innerHTML = `
-            <div class="modal-overlay" onclick="timelineModal.closeModal()"></div>
+            <div class="modal-overlay"></div>
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 id="modalTitle"></h2>
-                    <button class="modal-close" onclick="timelineModal.closeModal()">×</button>
+                    <button class="modal-close">×</button>
                 </div>
                 <div class="modal-body" id="modalBody">
                     <!-- 内容将在这里动态加载 -->
@@ -30,11 +29,27 @@ export class TimelineModal {
     }
 
     addEventListeners() {
+        // 监听ESC键关闭模态框
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 this.closeModal();
             }
         });
+
+        // 监听模态框内的点击事件
+        const modal = document.getElementById('periodModal');
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                // 点击遮罩层关闭
+                if (e.target.classList.contains('modal-overlay')) {
+                    this.closeModal();
+                }
+                // 点击关闭按钮
+                if (e.target.classList.contains('modal-close')) {
+                    this.closeModal();
+                }
+            });
+        }
     }
 
     showPeriodDetail(period) {
@@ -475,11 +490,13 @@ export class TimelineModal {
 
     closeModal() {
         const modal = document.getElementById('periodModal');
-        modal.classList.remove('modal-active');
-        
-        setTimeout(() => {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }, 300);
+        if (modal) {
+            modal.classList.remove('modal-active');
+            
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
     }
 }
